@@ -2,8 +2,8 @@ import React from 'react'
 import './Timeline.css'
 
 function Timeline() {
-  
-  const magenta = [255, 0, 255]
+
+  const finalColour = [255, 0, 255]
   const xCount = 15
   const yCount = 9
   const maxVersionSize = 60
@@ -31,11 +31,11 @@ function Timeline() {
                         margin: `${margin}px ${margin}px ${margin}px 0`,
                         height: `${maxVersionSize - (j - 1) * 2}px`,
                         width: `${maxVersionSize}px`,
-                        borderRadius: `${j * 5}%`,
+                        borderRadius: `${(j - 1) * 5}%`,
                         backgroundColor: `rgb(
-                          ${magenta[0]*(j / xCount)},
-                          ${magenta[1]*(j / xCount)},
-                          ${magenta[2]*(j / xCount)}
+                          ${finalColour[0]*(j / xCount)},
+                          ${finalColour[1]*(j / xCount)},
+                          ${finalColour[2]*(j / xCount)}
                         )`
                       }}
                       key={`v${i}${j}`}
