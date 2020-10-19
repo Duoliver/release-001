@@ -1,13 +1,14 @@
 import React from 'react'
 import './Timeline.css'
+import { generateColour, generateNumber } from './utils'
 
 function Timeline() {
 
-  const initialColour = [255, 255, 0]
-  const finalColour = [255, 0, 255]
-  const xCount = 33
-  const yCount = 33
-  const maxVersionSize = 60
+  const initialColour = generateColour()
+  const finalColour = generateColour()
+  const xCount = generateNumber(30, 100)
+  const yCount = generateNumber(30, 100)
+  const maxVersionSize = generateNumber(40, 60)
 
   return (
     <div className="timeline">
