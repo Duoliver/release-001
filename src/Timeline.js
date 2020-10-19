@@ -5,8 +5,8 @@ function Timeline() {
 
   const initialColour = [255, 255, 0]
   const finalColour = [255, 0, 255]
-  const xCount = 15
-  const yCount = 9
+  const xCount = 33
+  const yCount = 33
   const maxVersionSize = 60
 
   return (
