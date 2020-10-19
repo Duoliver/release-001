@@ -3,6 +3,7 @@ import './Timeline.css'
 
 function Timeline() {
 
+  const initialColour = [255, 255, 0]
   const finalColour = [255, 0, 255]
   const xCount = 15
   const yCount = 9
@@ -33,10 +34,10 @@ function Timeline() {
                         width: `${maxVersionSize}px`,
                         borderRadius: `${(j - 1) * 5}%`,
                         backgroundColor: `rgb(
-                          ${finalColour[0]*(j / xCount)},
-                          ${finalColour[1]*(j / xCount)},
-                          ${finalColour[2]*(j / xCount)}
-                        )`
+                          ${(initialColour[0]*(xCount - j) + finalColour[0] * j)/xCount},
+                          ${(initialColour[1]*(xCount - j) + finalColour[1] * j)/xCount},
+                          ${(initialColour[2]*(xCount - j) + finalColour[2] * j)/xCount}
+                        )`,
                       }}
                       key={`v${i}${j}`}
                     />
